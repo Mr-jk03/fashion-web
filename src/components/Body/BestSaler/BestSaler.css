@@ -1,0 +1,20 @@
+.wrapper-best-saler{
+    height: auto;
+    width: 100%;
+    padding: 5px 10px;
+}
+.title-best-saler{
+    height: 45px;
+    width: 100%;
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 45px;
+    text-transform: uppercase;
+}
+.name-product span{
+    overflow: hidden;
+}
+.best-saler span{
+    color:#000;
+}

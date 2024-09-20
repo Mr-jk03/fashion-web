@@ -1,0 +1,33 @@
+.flash-sale-title{
+    height: 76px;
+    width: 70%;
+    padding:5px 5px 5px 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.flash-sale-text h2 a{
+    text-decoration: none;
+    color: #f2611c;
+    margin-right: 15px;
+    padding-top: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.flash-sale-countdown {
+    height: 30px;
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+}
+.flash-sale-countdown span{
+        height: 24px;
+    width: 28px;
+    background-color: #000;
+    border-radius: 5px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+

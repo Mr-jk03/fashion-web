@@ -1,0 +1,55 @@
+.menu{
+    position: absolute;
+    top: 46px;
+    left: 5px;
+    width: 350px;
+    height: auto;
+    padding: 5px;
+    background-color: rgb(219, 220, 220);
+}
+.menu.close{
+    transform: translateX(-100%);
+    transition: 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.menu-head{
+    position: relative;
+    height: 45px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid gray;
+}
+.menu-head span{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.menu-head i{
+    position: absolute;
+    height: 28px;
+    width: 18;
+    top: 5px;
+    right: 15px;
+}
+
+
+.ul-mobile{
+    list-style: none;
+    padding-left: 5px;
+}
+.ul-mobile li{
+    height: 50px;
+    width: 100%;
+    padding: 5px 0;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.ul-mobile li a{
+    text-decoration: none;
+    color: #000;
+}
+.ul-mobile li:hover{
+    text-decoration: underline;
+}

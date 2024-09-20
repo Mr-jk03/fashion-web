@@ -1,0 +1,76 @@
+.main-category-fl-sale{
+    height: auto;
+    width: 100%;
+    padding: 5px 10px;
+}
+.categories{
+    position: relative;
+}
+.con-category{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ctg-img{
+    height: 351px;
+    width: 351px;
+}
+.categories img{
+    width: 100%;
+    height: 351px;
+    object-fit: cover;
+}
+.categories img:hover{
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+}
+
+.info-product{
+    height: 75px;
+    width: 100%;
+    margin-top: 5px;
+}
+.name-product{
+    height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.price-product{
+    height: 45px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.price-product span{
+    font-size: 17px;
+    font-weight: bold;
+    color: #ed1c24;
+}
+
+.see-more-category{
+    height: 35px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.see-more-category a{
+    text-align: center;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+@media (max-width: 360px){
+    .categories img{
+        height: auto;
+        width: 100%;
+    }
+}

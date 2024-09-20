@@ -1,0 +1,109 @@
+.footer{
+    padding-top:10px;
+    background-color: #000;
+    color: #fff;
+}
+
+.address{
+    height: auto;
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+}
+.address ul li{
+    list-style: none;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
+}
+.address ul li a{
+    text-decoration: none;
+    color: #fff;
+    margin-left: 15px;
+}
+.address ul li a:hover{
+    text-decoration: underline;
+}
+/*-------------------------*/
+
+.instruct{
+    height: auto;
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+}
+.instruct ul li{
+    list-style: none;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
+}
+.instruct ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 5px;
+}
+.instruct ul li a:hover{
+    text-decoration: underline;
+}
+/*---------------*/
+.policy{
+    height: auto;
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+}
+.policy ul li{
+    list-style: none;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
+}
+.policy ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 5px;
+}
+.policy ul li a:hover{
+    text-decoration: underline;
+}
+/*---------------*/
+.notification{
+    height: auto;
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+}
+.notification li{
+    list-style: none;
+    font-size: 15px;
+}
+.email-notification{
+    height: 45px;
+    width: 100%;
+    border: 1px solid gray;
+    outline: none;
+    padding: 5px;
+}
+.btn-notification{
+    margin-top: 5px;
+    height: 45px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.coppy-by{
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+}

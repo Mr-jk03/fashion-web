@@ -1,0 +1,107 @@
+.main-body{
+    width: 100%;
+    height: auto;
+}
+
+.hotline-phone-ring {
+    position: fixed;
+    bottom: 10px;
+    left: 0px;
+    width: 120px;
+    height: 120px;
+    z-index: 100000;
+}
+
+.hotline-phone-ring-circle {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 100%;
+    background-color: transparent;
+    border: 2px solid rgb(7, 218, 237);
+    animation: phonering-alo-circle-anim 1.2s infinite ease-in-out;
+    opacity: 0.5;
+}
+
+.hotline-phone-ring-circle-fill {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgb(7, 218, 237);
+    border-radius: 100%;
+    animation: phonering-alo-circle-fill-anim 1.2s infinite ease-in-out;
+    opacity: 0.5;
+}
+
+.hotline-phone-ring-img-circle {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    background-color: rgb(7, 218, 237);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: phonering-alo-img-anim 0.8s infinite linear;
+}
+
+.hotline-phone-ring-img-circle img {
+    width: 30px;
+    height: 30px;
+}
+
+@keyframes phonering-alo-circle-anim {
+    0% {
+        transform: scale(0.7);
+        opacity: 0.1;
+    }
+    30% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1.4);
+        opacity: 0.1;
+    }
+}
+
+@keyframes phonering-alo-circle-fill-anim {
+    0% {
+        transform: scale(0.5);
+        opacity: 0.1;
+    }
+    30% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 0.1;
+    }
+}
+
+@keyframes phonering-alo-img-anim {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(20deg);
+    }
+    50% {
+        transform: rotate(-20deg);
+    }
+    75% {
+        transform: rotate(20deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
