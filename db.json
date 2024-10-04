@@ -1,0 +1,427 @@
+{
+    "FlashSale":[
+        {
+            "id": 1,
+            "name": "Giày sandal nam MWC NASD- 7068 Giày Sandal Nam Quai Ngang Chéo Kiểu Dáng Basic Thời Trang",
+            "price": 49000,
+            "description": "Giày thời trang cao cấp",
+            "image":"https://product.hstatic.net/1000366086/product/u3550a_c6009_1_1e78e8035c3544c48104b25413185285.jpg",
+            "category": "FlashSale"
+        },
+        {
+            "id": 2,
+            "name": "Giày Sandal - 7069 Giày Sandal Nam Quai Ngang Kiểu Dáng Basic Đi Học,Đi Làm,Đi Chơi",
+            "price": 49000,
+            "description": "Giày thời trang cao cấp",
+            "image":"https://img.mwc.com.vn/giay-thoi-trang?w=480&h=510&FileInput=/Resources/Product/2023/09/29/z4737720779386_300093a98bd2c8da65bbd7b990652e16.jpg",
+            "category": "FlashSale"
+        },
+        {
+            "id": 3,
+            "name": "Giày Sandal - 7067 Giày Sandal Nam Quai Ngang Chéo Kiểu Dáng Basic Đi Học,Đi Làm,Đi Chơi",
+            "price": 49000,
+            "description": "Giày thời trang cao cấp",
+            "image":"https://timan.vn/upload/products/042024/giay-sandal-nam-tmrk33-phong-cach-don-gian.jpg",
+            "category": "FlashSale"
+        },
+        {
+            "id": 4,
+            "name": "Giày nữ",
+            "price": 49000,
+            "description": "Giày Sandal - 7070 Giày Sandal Nam Quai Ngang Chéo Kiểu Dáng Basic Đi Học,Đi Làm,Đi Chơi",
+            "image":"https://giayda360.com/wp-content/uploads/2018/06/12-d-1-scaled.jpg",
+            "category": "FlashSale"
+        }
+    ],
+    "BestSaler":[
+        {
+            "id": 1,
+            "name": "Mẫu giày dép sandals Nữ đi học cực trendy",
+            "price": 70000,
+            "description": "Giày Sandal - 7070 Giày Sandal Nam Quai Ngang Chéo Kiểu Dáng Basic Đi Học,Đi Làm,Đi Chơi",
+            "image":"https://cdn.shopify.com/s/files/1/0585/8181/1355/files/giay-dep-sandals-nu-di-hoc-8.jpg?v=1700635384",
+            "category": "BestSaler"
+        },
+        {
+            "id": 2,
+            "name": "Giày sandal nữ đi học đế bánh mì quai hậu gài chéo màu trắng trẻ trung basic bền êm",
+            "price": 300000,
+            "description": "thời trang cao cấp",
+            "image":"https://img.lazcdn.com/g/p/7f44a6e9a74749e0e22c0fa1c097088e.jpg_720x720q80.jpg",
+            "category": "BestSaler"
+        },
+        {
+            "id": 3,
+            "name": "DÉP LÊ NỮ KIỂU DÁNG ĐƠN GIẢN, SANG CHẢNH DEPNU80-7",
+            "price": 79000,
+            "description": "Giày Sandal - 7070 Giày Sandal Nam Quai Ngang Chéo Kiểu Dáng Basic Đi Học,Đi Làm,Đi Chơi",
+            "image":"https://pos.nvncdn.com/205d8e-20707/ps/20240305_20kN1cGnwP.jpeg",
+            "category": "BestSaler"
+        },
+        {
+            "id": 4,
+            "name": "Balo dung tích lớn BANGE - LARGO",
+            "price": 250000,
+            "description": "thời trang cao cấp",
+            "image":"https://macinsta.vn/wp-content/uploads/2023/04/BL99-2.jpg",
+            "category": "BestSaler"
+        },
+        {
+            "id": 5,
+            "name": "Balo học sinh Laura Sunshine Nhật Kim Anh cao cấp",
+            "price": 650000,
+            "description": "Giày Sandal - 7070 Giày Sandal Nam Quai Ngang Chéo Kiểu Dáng Basic Đi Học,Đi Làm,Đi Chơi",
+            "image":"https://laurasunshinevn.com/wp-content/uploads/2023/09/Balo-hoc-sinh-laura-sunshine-nhat-kim-anh-1.jpg",
+            "category": "BestSaler"
+        },
+        {
+            "id": 6,
+            "name": "Giày Thể Thao Nam TA2740",
+            "price": 250000,
+            "description": "thời trang cao cấp",
+            "image":"https://zizoou.com/cdn/shop/files/Balo-nam-nu-30b-23_Extras-ZiZoou-Store.jpg?v=1685723352",
+            "category": "BestSaler"
+        },
+        {
+            "id": 7,
+            "name": "Giày Thể Thao Nam Biti's BSM001100",
+            "price": 370000,
+            "description": "Giày Sandal - 7070 Giày Sandal Nam Quai Ngang Chéo Kiểu Dáng Basic Đi Học,Đi Làm,Đi Chơi",
+            "image":"https://product.hstatic.net/1000230642/product/bsm001100den1_01690cbb8f214c259165b1c34d7d9daf.jpg",
+            "category": "BestSaler"
+        },
+        {
+            "id": 8,
+            "name": "Giày thể thao nam KATEZAG49 cổ thấp phong cách Hàn Quốc",
+            "price": 300000,
+            "description": "thời trang cao cấp",
+            "image":"https://bizweb.dktcdn.net/thumb/1024x1024/100/467/298/products/giay-sneaker-nam-cao-co-ullzang-de-bang-di-hoc-di-choi-mau-moi-ca-tinh-dep-thoang-khi-giay-nam-kateza43-1662014934809.jpg?v=1666197171237",
+            "category": "BestSaler"
+        },{
+            "id": 9,
+            "name": "GIÀY SANDALS CAO GÓT NỮ PRISILLA-WHITE - ALDO VN",
+            "price": 360000,
+            "description": "thời trang cao cấp",
+            "image":"https://product.hstatic.net/200000726949/product/prisilla_white_100-002-044_alt3_sq_nt_1200x1200_6aa4c5a855f14327acc90df7a1800699_master.jpg",
+            "category": "BestSaler"
+        },
+        {
+            "id": 10,
+            "name": "Giày Cao Gót GU2423",
+            "price": 550000,
+            "description": "thời trang cao cấp",
+            "image":"https://streetstyleshop.vn/wp-content/uploads/2020/12/giay-cao-got-sang-chanh-3-600x600.jpg",
+            "category": "BestSaler"
+        },
+        {
+            "id": 11,
+            "name": "Giày cao gót nữ bít mũi phủ Sequin",
+            "price": 460000,
+            "description": "thời trang cao cấp",
+            "image":"https://product.hstatic.net/1000311467/product/dn33-5_6c7eb23f61f547bf9d1940e49942eaf4_master.jpg",
+            "category": "BestSaler"
+        },
+        {
+            "id": 12,
+            "name": "Giày Cao Gót Kiểu Dáng Mũi Oval Siêu Xinh",
+            "price": 960000,
+            "description": "thời trang cao cấp",
+            "image":"https://img.mwc.com.vn/giay-thoi-trang?w=480&h=510&FileInput=/Resources/Product/2023/10/16/z4785466533670_54e86650be7838529d85319fac594054.jpg",
+            "category": "BestSaler"
+        },{
+            "id": 13,
+            "name": "Balo du lịch da bò sáp bụi bặm cá tính B300",
+            "price": 2850000,
+            "description": "thời trang cao cấp",
+            "image":"https://www.gento.vn/wp-content/uploads/2021/08/balo-da-bo-b300.jpg",
+            "category": "BestSaler"
+        },
+        {
+            "id": 14,
+            "name": "Balo siêu nhẹ chống gù Sakos Lightly - Hồng (Thỏ Con)",
+            "price": 725000,
+            "description": "thời trang cao cấp",
+            "image":"https://topbag.vn/media/images/large/san-pham/balo/sakos/lightly/balo-chong-gu-sieu-nhe-sakos-lightly-tho-hong-1.jpg",
+            "category": "BestSaler"
+        },
+        {
+            "id": 15,
+            "name": "Balo Nam Nữ cá tính du lịch đi học, chống sốc - White Casual Youth Style Pack",
+            "price": 3150000,
+            "description": "thời trang cao cấp",
+            "image":"https://zizoou.com/cdn/shop/files/Balo-nam-nu-30b-23_Extras-ZiZoou-Store.jpg?v=1685723352",
+            "category": "BestSaler"
+        },
+        {
+            "id": 16,
+            "name": "Balo ngăn đôi phối viền đen - BAC 0193 - Màu đen",
+            "price": 699000,
+            "description": "thời trang cao cấp",
+            "image":"https://www.vascara.com/uploads/cms_productmedia/2023/August/31/balo-ngan-doi-phoi-vien-den---bac-0193---mau-den__71555__1693429269-medium.jpg",
+            "category": "BestSaler"
+        }
+    ],
+    "Womenshoes":[
+        {
+            "id": 1,
+            "name": "GIÀY SANDALS CAO GÓT NỮ PRISILLA-WHITE - ALDO VN",
+            "price": 360000,
+            "description": "thời trang cao cấp",
+            "image":"https://product.hstatic.net/200000726949/product/prisilla_white_100-002-044_alt3_sq_nt_1200x1200_6aa4c5a855f14327acc90df7a1800699_master.jpg",
+            "category": "Womenshoes"
+        },
+        {
+            "id": 2,
+            "name": "Giày Cao Gót GU2423",
+            "price": 550000,
+            "description": "thời trang cao cấp",
+            "image":"https://down-vn.img.susercontent.com/file/5231e4324eda4edf26eaa17ee7931968_tn",
+            "category": "Womenshoes"
+        },
+        {
+            "id": 3,
+            "name": "Giày cao gót nữ bít mũi phủ Sequin",
+            "price": 460000,
+            "description": "thời trang cao cấp",
+            "image":"https://product.hstatic.net/1000311467/product/dn33-5_6c7eb23f61f547bf9d1940e49942eaf4_master.jpg",
+            "category": "Womenshoes"
+        },
+        {
+            "id": 4,
+            "name": "Giày Cao Gót Kiểu Dáng Mũi Oval Siêu Xinh",
+            "price": 960000,
+            "description": "thời trang cao cấp",
+            "image":"https://img.mwc.com.vn/giay-thoi-trang?w=480&h=510&FileInput=/Resources/Product/2023/10/16/z4785466533670_54e86650be7838529d85319fac594054.jpg",
+            "category": "Womenshoes"
+        },
+        {
+            "id": 5,
+            "name": "GIÀY CAO GÓT TRONG SUỐT 15CM HÀNG CHÍNH HÃNG",
+            "price": 550000,
+            "description": "thời trang cao cấp",
+            "image":"https://bizweb.dktcdn.net/100/480/684/products/z3539425558368-8c50b66f410fd5ad2137b03f502bfbbe.jpg?v=1681008207767",
+            "category": "Womenshoes"
+        },
+        {
+            "id": 6,
+            "name": "Giày cao gót nữ RO565",
+            "price": 660000,
+            "description": "thời trang cao cấp",
+            "image":"https://www.zstyle.vn/library/module_new/giay-cao-got-nu-ro565-mau-xam_s2364.png",
+            "category": "Womenshoes"
+        },
+        {
+            "id": 7,
+            "name": "Giày cao gót Bigtree chính hãng Giày nữ thời trang Giày công sở 9219",
+            "price": 990000,
+            "description": "thời trang cao cấp",
+            "image":"https://bizweb.dktcdn.net/100/480/684/products/9219-2-2.jpg?v=1680489802680",
+            "category": "Womenshoes"
+        },
+        {
+            "id": 8,
+            "name": "HERMES SHOE NỮ MÃ HIỆU H201006Z-02380",
+            "price": 360000,
+            "description": "thời trang cao cấp",
+            "image":"https://storevietnam.com.vn/wp-content/uploads/Giay-cao-got-Hermes-authentic-mau-den-ma-H201006Z-02380.jpg",
+            "category": "Womenshoes"
+        }
+    ],
+    "Bags":[
+        {
+            "id": 1,
+            "name": "Balo du lịch da bò sáp bụi bặm cá tính B300",
+            "price": 2850000,
+            "description": "thời trang cao cấp",
+            "image":"https://www.gento.vn/wp-content/uploads/2021/08/balo-da-bo-b300.jpg",
+            "category": "Bags"
+        },
+        {
+            "id": 2,
+            "name": "Balo siêu nhẹ chống gù Sakos Lightly - Hồng (Thỏ Con)",
+            "price": 725000,
+            "description": "thời trang cao cấp",
+            "image":"https://topbag.vn/media/images/large/san-pham/balo/sakos/lightly/balo-chong-gu-sieu-nhe-sakos-lightly-tho-hong-1.jpg",
+            "category": "Bags"
+        },
+        {
+            "id": 3,
+            "name": "Balo Nam Nữ cá tính du lịch đi học, chống sốc - White Casual Youth Style Pack",
+            "price": 3150000,
+            "description": "thời trang cao cấp",
+            "image":"https://zizoou.com/cdn/shop/files/Balo-nam-nu-30b-23_Extras-ZiZoou-Store.jpg?v=1685723352",
+            "category": "Bags"
+        },
+        {
+            "id": 4,
+            "name": "Balo ngăn đôi phối viền đen - BAC 0193 - Màu đen",
+            "price": 699000,
+            "description": "thời trang cao cấp",
+            "image":"https://www.vascara.com/uploads/cms_productmedia/2023/August/31/balo-ngan-doi-phoi-vien-den---bac-0193---mau-den__71555__1693429269-medium.jpg",
+            "category": "Bags"
+        },
+        {
+            "id": 5,
+            "name": "Balo cầu lông Apavi AB-202",
+            "price": 3050000,
+            "description": "thời trang cao cấp",
+            "image":"https://apavi.vn/vnt_upload/product/06_2023/0D0A0372.jpg",
+            "category": "Bags"
+        },
+        {
+            "id": 6,
+            "name": "Balo đi học nam nữ Hàn Quốc GB-BL47",
+            "price": 269000,
+            "description": "thời trang cao cấp",
+            "image":"https://gubag.vn/wp-content/uploads/2022/05/balo-thoi-trang-nam-nu-gb-bl47-2.jpg",
+            "category": "Bags"
+        },
+        {
+            "id": 7,
+            "name": "Balo Laptop thời trang nam GUBAG GB-BL28 Màu đen",
+            "price": 2950000,
+            "description": "thời trang cao cấp",
+            "image":"https://hanoicomputercdn.com/media/product/70624_balo_laptop_thoi_trang_nam_gubag_gb_bl28_15.png",
+            "category": "Bags"
+        },
+        {
+            "id": 8,
+            "name": "Balo Thời Trang Nữ Cao Cấp",
+            "price": 4850000,
+            "description": "thời trang cao cấp",
+            "image":"https://static.hotdeal.vn/images/1027/1027432/500x500/260734-balo-thoi-trang-nu-cao-cap.jpg",
+            "category": "Bags"
+        }    
+    ],
+    "SandalGirl":[
+        {
+            "id": 1,
+            "name": "Sandal nữ Hàn Quốc 061711",
+            "price": 1340000,
+            "description": "thời trang cao cấp",
+            "image":"https://bizweb.dktcdn.net/thumb/1024x1024/100/119/564/products/sandal-nu-han-quoc-p511.jpg",
+            "category": "SandalGirl"
+        },
+        {
+            "id": 2,
+            "name": "Giày Dép Sandal Nữ Weesr Hàng Mùa Hè Phong Cách Hàn Quốc",
+            "price": 8900000,
+            "description": "thời trang cao cấp",
+            "image":"https://cbu01.alicdn.com/img/ibank/O1CN01ZwqLwk1mkNqE08ukQ_!!2324784992-0-cib.jpg",
+            "category": "SandalGirl"
+        }, 
+        {
+            "id": 3,
+            "name": "Sandal Da Bò Nữ Cao Cấp AG0281 , tinh tế, cao cấp ",
+            "price": 2050000,
+            "description": "thời trang cao cấp",
+            "image":"https://agiay.vn/wp-content/uploads/2023/06/sandal-nu-ag0281-1-500x500.jpg",
+            "category": "SandalGirl"
+        },
+        {
+            "id": 4,
+            "name": "Sandal nữ Hàn Quốc",
+            "price": 1310000,
+            "description": "thời trang cao cấp",
+            "image":"https://bizweb.dktcdn.net/thumb/1024x1024/100/119/564/products/sandal-nu-han-quoc-va308.jpg?v=1687851339103",
+            "category": "SandalGirl"
+        }, 
+        {
+            "id": 5,
+            "name": "Sandal Nữ Đế Suồng",
+            "price": 2950000,
+            "description": "thời trang cao cấp",
+            "image":"https://img.websosanh.vn/v10/users/review/images/o5f8svhpmb88w/giay-sandal-de-xuong-2.jpg?compress=85",
+            "category": "SandalGirl"
+        },
+        {
+            "id": 6,
+            "name": "Sandal nữ đi học [HOT 2021] dép quai hậu nữ đế cao su siêu xinh",
+            "price": 350000,
+            "description": "thời trang cao cấp",
+            "image":"https://cf.shopee.vn/file/a293df94fc97291098d71157d8973283",
+            "category": "SandalGirl"
+        }, 
+        {
+            "id": 7,
+            "name": "sandal nữ hàng Quảng Châu đang siêu (HOT)",
+            "price": 1950000,
+            "description": "thời trang cao cấp",
+            "image":"https://lephuonglogistics.vn/Uploads/NewsIMG/133386976754880835.jpg",
+            "category": "SandalGirl"
+        },
+        {
+            "id": 8,
+            "name": "Sandal Nữ Biti's Êmbrace DPW070500 Chính Hãng ",
+            "price": 2250000,
+            "description": "thời trang cao cấp",
+            "image":"https://product.hstatic.net/1000230642/product/sandal-nu-biti-s-embrace-blush-dpw070500-cay7k-color-hong-lot_e5c746cfa3cb4727851ffd77c2d8d442.jpg",
+            "category": "SandalGirl"
+        }
+    ],
+    "SandalBoys":[
+        {
+            "id": 1,
+            "name": "Sandal Nam Quai Ngang Chéo Phối Lót Dán Thời Trang",
+            "price": 225000,
+            "description": "thời trang cao cấp",
+            "image":"https://img.mwc.com.vn/giay-thoi-trang?w=480&h=510&FileInput=/Resources/Product/2023/09/29/z4737720779386_300093a98bd2c8da65bbd7b990652e16.jpg",
+            "category": "SandalBoys"
+        },
+        {
+            "id": 2,
+            "name": "Sandal Nam Da Bò Mẫu Đẹp 2020",
+            "price": 220000,
+            "description": "thời trang cao cấp",
+            "image":"https://down-vn.img.susercontent.com/file/d4748afd77524e2532974f6fb6cd6774",
+            "category":"SandalBoys"
+        },
+        {
+            "id": 3,
+            "name": "Giày sandal nam da bò GL226",
+            "price": 195000,
+            "description": "thời trang cao cấp",
+            "image":"https://evara.vn/uploads/plugin/product_items/437/gl226.jpg",
+            "category":"SandalBoys"
+        },
+        {
+            "id": 4,
+            "name": "GIÀY SANDAL NAM GL731",
+            "price": 2250000,
+            "description": "thời trang cao cấp",
+            "image":"https://evara.vn/uploads/plugin/product_items/302/0b139ae7f44bb31de0ea63718210d1b16f71f717.jpg",
+            "category":"SandalBoys"
+        },
+        {
+            "id": 5,
+            "name": "GIÀY SANDAL NAM GL731",
+            "price": 1950000,
+            "description": "thời trang cao cấp",
+            "image":"https://mcdn.coolmate.me/image/August2021/sandal2.jpg",
+            "category":"SandalBoys"
+        },
+        {
+            "id": 6,
+            "name": "Giày Sandal Nam TM-RK33",
+            "price": 590000,
+            "description": "thời trang cao cấp",
+            "image":"https://timan.vn/upload/products/042024/giay-sandal-nam-tmrk33-phong-cach-don-gian.jpg",
+            "category":"SandalBoys"
+        },
+        {
+            "id": 7,
+            "name": "Giày Sandal Nam Da Bò Thật - Bảo Hành Không Bong Nổ",
+            "price": 1950000,
+            "description": "thời trang cao cấp",
+            "image":"https://giayda360.com/wp-content/uploads/2018/06/12-d-1-scaled.jpg",
+            "category":"SandalBoys"
+        },
+        {
+            "id": 8,
+            "name": "Dép rọ sandal quai hậu nam trắng Gucci like auth SGC02",
+            "price": 2250000,
+            "description": "thời trang cao cấp",
+            "image":"https://hanghieusieucap.vn/wp-content/uploads/2023/07/dep-nam-gucci-like-auth-5-1.jpg"
+        }
+    ]
+}
