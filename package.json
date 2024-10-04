@@ -2,6 +2,7 @@
   "name": "mvc",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Mr-jk03.github.io/fashion-web",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -18,7 +19,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server --watch src/db/db.json --port 3000"
+    "server": "json-server --watch src/db/db.json --port 3000",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+
   },
   "eslintConfig": {
     "extends": [
@@ -39,6 +43,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^6.1.1",
     "json-server": "^1.0.0-beta.2"
   }
 }

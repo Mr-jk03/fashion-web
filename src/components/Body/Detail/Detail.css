@@ -1,18 +1,17 @@
+.main-detail{
+    padding-top: 100px;
+    width: 100%;
+    height: auto;
+}
+
 .product-info{
     padding: 15px 0;
 }
 
 
-.detail-img{
-    width: 100%;
-    height: 460px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 .detail-img img{
-    height: 100%;
-    width: auto;
+    height: auto;
+    width: 100%;
 }
 
 .detail-text{
@@ -173,7 +172,7 @@
 }
 .addcart-product button{
     height: 32px;
-    width: 284px;
+    width: 100%;
     background-color: #fff;
     color: #ed1c24;
     border: 1px solid #ed1c24;
@@ -182,7 +181,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 0 60px;
+    padding: 0 10px;
 }
 .addcart-product button:hover{
     background-color: #ed1c24;

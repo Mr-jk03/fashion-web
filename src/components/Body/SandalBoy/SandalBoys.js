@@ -14,7 +14,7 @@ const SandalBoys = () => {
 
   return (
     <>
-      <hr></hr>
+
       <div className='title-best-saler'>dép và sandal nam</div>
         <div className='wrapper-best-saler'>
             <div className='row con-category'>
@@ -38,6 +38,7 @@ const SandalBoys = () => {
                 <Link to='/sandalboyfull'>Xem tất cả</Link>
             </div>
         </div>
+        <hr></hr>
     </>
   )
 }

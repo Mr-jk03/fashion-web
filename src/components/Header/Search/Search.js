@@ -10,9 +10,10 @@ const Search = ({onToggleSearch}) => {
   return (
     <div className='search'>
         <input className='search-pc' type='text' placeholder='Tìm kiếm....'/>
-        <button className='btn-search' onClick={handleShowSearch} >
+        {/* <button className='btn-search' onClick={handleShowSearch} >
             <FiSearch/>
-        </button>
+        </button> */}
+        <i className='icon' onClick={handleShowSearch}><FiSearch /></i>
     </div>
   )
 }

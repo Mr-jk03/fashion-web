@@ -1,14 +1,15 @@
 import React, { useEffect, useRef, useState } from 'react'
-import Logo from './Logo/Logo'
+// import Logo from './Logo/Logo'
+import Logo from '../../components/Images/logoJK.png'
 import Navbar from './Navbar/Navbar'
 import Search from './Search/Search'
 import User from './User/User'
 import Cart from './Cart/Cart'
 import MenuIcon from './MenuIcon/MenuIcon'
-import { Routes, Route } from 'react-router-dom';
 import './Header.css'
 import MenuMobile from './Mobile/Menu/MenuMobile'
 import SearchMobile from './Mobile/Search/SearchMobile'
+import { Link } from 'react-router-dom';
 
 
 const Header = () => {
@@ -49,38 +50,41 @@ const Header = () => {
   return (
     <header className='header'>
         <div className='container'>
-            <div className='row d_flex'>
-                <div className='col-xl-2  menu-icon'>
-                {isMobile && <MenuIcon onClick={handleMenuToggle} />}
+            <div className='row mobile'>{/*d_flex */}
+                <div className="col-xl-3 col-lg-3 col-md-2 col-sm-6 col-6 left-item">
+                    <div className="row">
+                        <div className='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 menu-left-item'>
+                            {isMobile && <MenuIcon onClick={handleMenuToggle} />}
+                        </div>
+                        <div className='col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 logo'>
+                            <Link to='/'>
+                                <img src={Logo}/>
+                            </Link>
+                        </div>
+                    </div>
+                    
                 </div>
-                <div className='col-xl-2 col-md-3 col-sm-5 col-xs-3 logo'>
-                    <Logo/>
-                </div>
-                <div className='col-xl-6 col-md-6 navbar'>
+                <div className="col-xl-6 col-lg-6 col-md-6 nav-bar">
                     {!isMobile && <Navbar />}
-                    {/* <Routes>
-                        <Route>
-                            
-                        </Route>
-                    </Routes> */}
                 </div>
-                <div className='col-xl-2 col-md-1 col-sm-3 col-xs-2 search'>
-                    <Search onToggleSearch = {handleToggleSearch}/>
+                <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+                    <div className='row'>
+                        <div className= 'col-xl-2 col-lg-4 col-md-4 col-sm-4 col-4 right-center'>
+                            <User />
+                        </div>
+                        <div className= 'col-xl-8 col-lg-4 col-md-4 col-sm-4 col-4 right-center'>
+                            <Search onToggleSearch = {handleToggleSearch}/>
+                        </div>
+                        <div className= 'col-xl-2 col-lg-4 col-md-4 col-sm-4 col-4 right-center'>
+                            <Cart />
+                        </div>
+                    </div>
                 </div>
-                <div className='col-xl-1 col-md-1 col-sm-2 col-xs-1 user'>
-                    <User />
-                </div>
-                <div className='col-xl-1 col-md-1 col-sm-1 col-xs-1 cart'>
-                    <Cart />
-                </div>
-                
+
             </div>
         </div>
         <div className={`menu-mobile ${menuOpen ? 'open' : ''}`}>
             <MenuMobile menuOpen={menuOpen} onCloseMenu={handleMenuToggle}/>
-            {/* <Routes>
-
-            </Routes> */}
         </div> 
         <div className='search-mobile-hd' ref={searchMobile}>
             <SearchMobile onCloseSearchMobile={handleCloseSearchMobile}/>

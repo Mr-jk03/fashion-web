@@ -14,7 +14,6 @@ const BestSaler = ({product}) => {
     },[])
   return (
     <>
-        <hr></hr>
         <div className='title-best-saler'>sản phẩm bán chạy</div>
         <div className='wrapper-best-saler'>
             <div className='row con-category'>
@@ -38,6 +37,7 @@ const BestSaler = ({product}) => {
                 <Link to='/bestsalerfull'>Xem tất cả</Link>
             </div>
         </div>
+        <hr></hr>
     </>
   )
 }

@@ -10,8 +10,8 @@ const SandalBoyFull = () => {
         .catch(error => console.error('Error fetching products:', error))
     })
   return (
-    <>
-        <hr></hr>
+    <div className='full'>
+
         <div className='title-best-saler'>dép và sandal nam</div>
         <div className='wrapper-best-saler'>
             <div className='row con-category'>
@@ -32,7 +32,8 @@ const SandalBoyFull = () => {
                 ))}
             </div>
         </div>
-    </>
+        <hr></hr>
+    </div>
   )
 }
 export default SandalBoyFull

@@ -23,6 +23,7 @@ function App() {
         <Route path='/sandalboyfull' element={<SandalBoyFull />}/>
         <Route path='/detail' element={<Detail />}/>
         <Route path='/detail/:category/:id' element={<Detail />}/>
+        <Route path='/detail/:id' element={<Detail />}/>
       </Routes>
       <Footer />
     </>

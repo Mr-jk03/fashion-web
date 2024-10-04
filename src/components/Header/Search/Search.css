@@ -1,16 +1,18 @@
+.search{
+    position: relative;
+    width: 100%;
+}
 
 .search-pc{
     border-radius: 5px;
     border: 1px solid rgba(193, 190, 190, 0.892);
     height: 40px;
-    width: 185px;
+    width: 100%;
     outline: none;
     padding: 5px 40px 5px 5px;
 }
-.search{
-    position: relative;
-}
-.btn-search{
+
+.icon{
     position: absolute;
     height: 30px;
     width: 35px;
@@ -20,14 +22,16 @@
     line-height: 10px;
     border: none;
     border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (max-width: 1400px){
     .search-pc{
         display: none;
     }
-    .btn-search{
-        right: 0;
-        top: -10px;
+    .icon{
+        top: -14px;
     }
 }

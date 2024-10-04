@@ -31,6 +31,7 @@ const CategoryFlashSale = () => {
       <div className='see-more-category'>
         <Link to='/'>Xem tất cả</Link>
       </div>
+      <hr></hr>
     </div>
   );
 };

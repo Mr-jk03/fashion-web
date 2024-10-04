@@ -11,8 +11,7 @@ const WomenShoesFull = () => {
         .catch(error => console.error('Error fetching products:', error));
     },[])
   return (
-    <>
-        <hr></hr>
+    <div className='full'>
         <div className='title-best-saler'>giày cao gót nữ</div>
         <div className='wrapper-best-saler'>
             <div className='row con-category'>
@@ -33,7 +32,7 @@ const WomenShoesFull = () => {
                 ))}
             </div>
         </div>
-    </>
+    </div>
   )
 }
 export default WomenShoesFull

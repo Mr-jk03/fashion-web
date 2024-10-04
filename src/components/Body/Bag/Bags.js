@@ -12,7 +12,6 @@ const Bags = () => {
     })
   return (
     <>
-        <hr></hr>
         <div className='title-best-saler'>balo thời trang</div>
         <div className='wrapper-best-saler'>
             <div className='row con-category'>
@@ -36,6 +35,7 @@ const Bags = () => {
                 <Link to='/bags'>Xem tất cả</Link>
             </div>
         </div>
+        <hr></hr>
     </>
   )
 }

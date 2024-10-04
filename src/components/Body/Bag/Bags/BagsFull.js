@@ -11,14 +11,13 @@ const BagsFull = () => {
         .catch(error => console.error('Error fetching products:', error));
     },[])
   return (
-    <>
-        <hr></hr>
+    <div className='full'>
         <div className='title-best-saler'>balo thời trang</div>
         <div className='wrapper-best-saler'>
             <div className='row con-category'>
                 {products.map((product,index) =>(
                     <div className='col-lg-3 col-md-5 col-sm-5 categories' key={index}>
-                        <Link to='/'>
+                        <Link to={`/detail/${product.id}`}>
                             <img src={product.image} alt={product.name}/>
                         </Link>
                         <div className='info-product'>
@@ -33,7 +32,7 @@ const BagsFull = () => {
                 ))}
             </div>
         </div>
-    </>
+    </div>
   )
 }
 export default BagsFull

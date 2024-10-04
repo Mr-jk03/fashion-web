@@ -32,7 +32,7 @@ const Body = () => {
                       <img src={PhoneRing}/>
                     </Link>
               </div>
-        </div>
+            </div>
     </div>
   )
 }

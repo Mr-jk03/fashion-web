@@ -1,3 +1,7 @@
+.full{
+    padding-top: 130px;
+}
+
 .wrapper-best-saler{
     height: auto;
     width: 100%;
@@ -11,6 +15,7 @@
     text-align: center;
     line-height: 45px;
     text-transform: uppercase;
+    /* margin-top: 100px; */
 }
 .name-product span{
     overflow: hidden;

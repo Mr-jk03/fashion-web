@@ -12,8 +12,7 @@ const BestSalerFull = () => {
         .catch(error => console.error('Error fetching products:', error));
     },[])
   return (
-    <>
-      <hr></hr>
+    <div className='full'>
         <div className='title-best-saler'>sản phẩm bán chạy</div>
         <div className='wrapper-best-saler'>
             <div className='row con-category'>
@@ -34,7 +33,8 @@ const BestSalerFull = () => {
                 ))}
             </div>
         </div>
-    </>
+        <hr></hr>
+    </div>
   )
 }
 export default BestSalerFull
