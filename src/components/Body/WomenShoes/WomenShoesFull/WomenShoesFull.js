@@ -17,7 +17,7 @@ const WomenShoesFull = () => {
             <div className='row con-category'>
                 {products.map((product,index) =>(
                     <div className='col-lg-3 col-md-5 col-sm-5 categories' key={index}>
-                        <Link to='/'>
+                        <Link to={`/detail/Womenshoes/${product.id}`}>
                             <img src={product.image} alt={product.name}/>
                         </Link>
                         <div className='info-product'>

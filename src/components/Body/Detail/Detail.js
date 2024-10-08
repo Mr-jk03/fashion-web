@@ -1,36 +1,61 @@
-import React, { useEffect, useState } from 'react'
-import './Detail.css'
-import { IoIosStar } from "react-icons/io";
-import { IoIosStarOutline } from "react-icons/io";
+import React, { useEffect, useState, memo } from 'react';
+import './Detail.css';
+import { IoIosStar, IoIosStarOutline } from "react-icons/io";
 import { TiShoppingCart } from "react-icons/ti";
 import { Link, useParams } from 'react-router-dom';
 
-
-const Detail = () => {
+const Detail = ({ onIncrease }) => {
     const [selectButton, setSelectButton] = useState(null);
-
-    const {id, category} = useParams();
+    const { id, category } = useParams();
     const [product, setProduct] = useState(null);
+    const [loading, setLoading] = useState(true); // Trạng thái loading
+    const [error, setError] = useState(null); // Trạng thái lỗi
 
     useEffect(() => {
         fetch(`http://localhost:3000/${category}/${id}`)
-            .then((response) => response.json())
-            .then((data) => setProduct(data))
-            .catch((error) => console.error('Error fetching product:', error));
-    }, [id, category]);  
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('Failed to fetch product');
+                }
+                return response.json();
+            })
+            .then((data) => {
+                setProduct(data);
+                setLoading(false); // Dừng trạng thái loading
+            })
+            .catch((error) => {
+                console.error('Error fetching product:', error);
+                setError(error.message);
+                setLoading(false); // Dừng trạng thái loading
+            });
+    }, [id, category]);
 
-    const handleSizeClick = (size) =>{
+    const handleSizeClick = (size) => {
         setSelectButton(size);
     };
 
+    const handleAddtoCart = () => {
+        if (product) {
+            onIncrease({
+                id: product.id,
+                name: product.name,
+                price: product.price,
+                image: product.image,
+                quantity: 1
+            });
+            alert(`${product.name} đã được thêm vào giỏ hàng!`); // Thông báo cho người dùng
+        }
+    };
 
-  return (
-    <>
+    if (loading) return <div>Loading...</div>; // Hiển thị trạng thái loading
+    if (error) return <div>Error: {error}</div>; // Hiển thị lỗi nếu có
+
+    return (
         <div className='main-detail'>
             <div className='container'>
                 <div className='row product-info'>
                     <div className='col-xl-6 col-lg-6 col-md-6 detail-img'>
-                        <img src={product?.image}/>
+                        <img src={product?.image} alt={product?.name} />
                     </div>
                     <div className='col-xl-6 col-lg-6 col-md-6'>
                         <div className='detail-text'>
@@ -70,7 +95,7 @@ const Detail = () => {
                                 <div className='prd-size-text'>
                                     <span>Kích thước</span>
                                 </div>
-                                {[45, 46, 47].map((size) =>(
+                                {[45, 46, 47].map((size) => (
                                     <div className='prd-size' key={size}>
                                         <button
                                             onClick={() => handleSizeClick(size)}
@@ -85,13 +110,13 @@ const Detail = () => {
                             </div>
                             <span className='size-caculation'>
                                 <Link>Hướng dẫn tính size</Link>
-                            </span> 
+                            </span>
                             <div className='buy-addcart'>
                                 <div className='buy-product'>
                                     <button>Mua ngay</button>
                                 </div>
                                 <div className='addcart-product'>
-                                    <button>
+                                    <button onClick={handleAddtoCart}>
                                         <TiShoppingCart />
                                         Thêm vào giỏ hàng
                                     </button>
@@ -102,7 +127,7 @@ const Detail = () => {
                 </div>
             </div>
         </div>
-    </>
-  )
-}
-export default Detail
+    );
+};
+
+export default memo(Detail);

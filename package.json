@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://Mr-jk03.github.io/fashion-web",
   "dependencies": {
+    "@reduxjs/toolkit": "^2.2.7",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -22,7 +23,6 @@
     "server": "json-server --watch src/db/db.json --port 3000",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
-
   },
   "eslintConfig": {
     "extends": [

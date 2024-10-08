@@ -12,7 +12,7 @@ import SearchMobile from './Mobile/Search/SearchMobile'
 import { Link } from 'react-router-dom';
 
 
-const Header = () => {
+const Header = ({count}) => {
     const searchMobile = useRef(null);
     const [isMobile, setIsMobile] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
@@ -50,7 +50,7 @@ const Header = () => {
   return (
     <header className='header'>
         <div className='container'>
-            <div className='row mobile'>{/*d_flex */}
+            <div className='row mobile'>
                 <div className="col-xl-3 col-lg-3 col-md-2 col-sm-6 col-6 left-item">
                     <div className="row">
                         <div className='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 menu-left-item'>
@@ -69,14 +69,15 @@ const Header = () => {
                 </div>
                 <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
                     <div className='row'>
+                        <div className= 'col-xl-8 col-lg-4 col-md-4 col-sm-4 col-4 right-center'>
+                            <Search onToggleSearch = {handleToggleSearch}/>
+                            
+                        </div>
                         <div className= 'col-xl-2 col-lg-4 col-md-4 col-sm-4 col-4 right-center'>
                             <User />
                         </div>
-                        <div className= 'col-xl-8 col-lg-4 col-md-4 col-sm-4 col-4 right-center'>
-                            <Search onToggleSearch = {handleToggleSearch}/>
-                        </div>
                         <div className= 'col-xl-2 col-lg-4 col-md-4 col-sm-4 col-4 right-center'>
-                            <Cart />
+                            <Cart count={count}/>
                         </div>
                     </div>
                 </div>
