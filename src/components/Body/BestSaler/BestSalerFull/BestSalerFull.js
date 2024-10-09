@@ -6,9 +6,11 @@ const BestSalerFull = () => {
   const [products, setProducts] = useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:3000/BestSaler')
+        fetch('https://raw.githubusercontent.com/Mr-jk03/db/main/db.json')
         .then(response =>response.json())
-        .then(data =>setProducts(data))
+        .then(data =>{
+            const bestSalser = data.BestSaler
+            setProducts(bestSalser)})
         .catch(error => console.error('Error fetching products:', error));
     },[])
   return (
@@ -17,7 +19,7 @@ const BestSalerFull = () => {
         <div className='wrapper-best-saler'>
             <div className='row con-category'>
                 {products.map((product,index) =>(
-                    <div className='col-lg-3 col-md-5 col-sm-5 categories' key={index}>
+                    <div className='col-lg-3 col-md-5 col-sm-5 col-5 categories' key={index}>
                         <Link to={`/detail/BestSaler/${product.id}`}>
                             <img src={product.image} alt={product.name}/>
                         </Link>

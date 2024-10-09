@@ -10,12 +10,14 @@ import './Header.css'
 import MenuMobile from './Mobile/Menu/MenuMobile'
 import SearchMobile from './Mobile/Search/SearchMobile'
 import { Link } from 'react-router-dom';
+import { FaArrowRight } from "react-icons/fa";
 
 
 const Header = ({count}) => {
     const searchMobile = useRef(null);
     const [isMobile, setIsMobile] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
+    const [isVisible, setisVisible] = useState(false);
 
     useEffect(() =>{
         const handleResize = () =>{
@@ -46,6 +48,31 @@ const Header = ({count}) => {
     const handleCloseSearchMobile = () =>{
         searchMobile.current.classList.remove("show");
     }
+
+
+    useEffect(() =>{
+        const handleScroll = () =>{
+            if(window.scrollY > 100){
+                setisVisible(true);
+            }else{
+                setisVisible(false);
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll);
+
+        return() =>{
+            window.removeEventListener('scroll', handleScroll)
+        };
+    }, [])
+
+    const ScrollToTop = () =>{
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+
 
   return (
     <header className='header'>
@@ -90,6 +117,12 @@ const Header = ({count}) => {
         <div className='search-mobile-hd' ref={searchMobile}>
             <SearchMobile onCloseSearchMobile={handleCloseSearchMobile}/>
         </div>
+        {isVisible && (
+            <div className='back-to-top'>
+                <span>Back to top</span>
+                <button onClick={ScrollToTop}><FaArrowRight /></button>
+            </div>
+        )}
     </header>
   )
 }

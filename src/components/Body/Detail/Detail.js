@@ -4,6 +4,7 @@ import { IoIosStar, IoIosStarOutline } from "react-icons/io";
 import { TiShoppingCart } from "react-icons/ti";
 import { Link, useParams } from 'react-router-dom';
 
+
 const Detail = ({ onIncrease }) => {
     const [selectButton, setSelectButton] = useState(null);
     const { id, category } = useParams();
@@ -12,7 +13,7 @@ const Detail = ({ onIncrease }) => {
     const [error, setError] = useState(null); // Trạng thái lỗi
 
     useEffect(() => {
-        fetch(`http://localhost:3000/${category}/${id}`)
+        fetch('https://raw.githubusercontent.com/Mr-jk03/db/main/db.json')
             .then((response) => {
                 if (!response.ok) {
                     throw new Error('Failed to fetch product');
@@ -20,15 +21,22 @@ const Detail = ({ onIncrease }) => {
                 return response.json();
             })
             .then((data) => {
-                setProduct(data);
-                setLoading(false); // Dừng trạng thái loading
+                // Lọc sản phẩm dựa trên id và category
+                const productData = data[category]?.find(item => item.id === parseInt(id));
+                if (productData) {
+                    setProduct(productData);
+                } else {
+                    throw new Error('Product not found');
+                }
+                setLoading(false);
             })
             .catch((error) => {
                 console.error('Error fetching product:', error);
                 setError(error.message);
-                setLoading(false); // Dừng trạng thái loading
+                setLoading(false);
             });
     }, [id, category]);
+    
 
     const handleSizeClick = (size) => {
         setSelectButton(size);

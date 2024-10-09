@@ -31,7 +31,7 @@ const FlashSale = () => {
 
   return (
     <div className='container row flash-sale-title '>
-        <div className='col-xl-3 col-lg-5 col-md-5 col-sm-7 col-xs-9 flash-sale-text '>
+        <div className='col-xl-3 col-lg-5 col-md-5 col-sm-7 col-5 flash-sale-text '>
           <h2>
             <Link to='/'>Flash Sale</Link>
           </h2>

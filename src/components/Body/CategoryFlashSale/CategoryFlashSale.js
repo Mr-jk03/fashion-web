@@ -6,9 +6,11 @@ const CategoryFlashSale = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/FlashSale')
+    fetch('https://raw.githubusercontent.com/Mr-jk03/db/main/db.json')
       .then(response => response.json())
-      .then(data => setProducts(data))
+      .then(data => {
+        const bestSalser = data.FlashSale
+        setProducts(bestSalser)})
       .catch(error => console.error('Error fetching products:', error));
   }, []);
 
@@ -16,7 +18,7 @@ const CategoryFlashSale = () => {
     <div className='main-category-fl-sale'>
       <div className='row con-category'>
         {products.slice(0,4).map((product, index) => (
-          <div className='col-lg-3 col-md-5 col-sm-5 categories' key={index}>
+          <div className='col-lg-3 col-md-5 col-sm-5 col-5 categories' key={index}>
             <Link to={`/detail/FlashSale/${product.id}`}>
               <img src={product.image} alt={product.name} />
             </Link>

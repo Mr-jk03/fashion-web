@@ -6,9 +6,11 @@ const SandalBoys = () => {
   const[products, setProducts] = useState([]);
 
   useEffect(() =>{
-    fetch('http://localhost:3000/SandalBoys')
+    fetch('https://raw.githubusercontent.com/Mr-jk03/db/main/db.json')
     .then(response => response.json())
-    .then(data => setProducts(data))
+    .then(data => {
+        const bestSalser = data.SandalBoys
+        setProducts(bestSalser)})
     .catch(error => console.error('Error fetching products:', error))
   })
 
@@ -19,7 +21,7 @@ const SandalBoys = () => {
         <div className='wrapper-best-saler'>
             <div className='row con-category'>
                 {products.slice(0,4).map((product,index) =>(
-                    <div className='col-lg-3 col-md-5 col-sm-5 categories' key={index}>
+                    <div className='col-lg-3 col-md-5 col-sm-5 col-5 categories' key={index}>
                         <Link to={`/detail/SandalBoys/${product.id}`}>
                             <img src={product.image} alt={product.name}/>
                         </Link>

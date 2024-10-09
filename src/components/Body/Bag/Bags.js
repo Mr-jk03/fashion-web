@@ -5,18 +5,20 @@ import {Link} from 'react-router-dom'
 const Bags = () => {
     const[products, setProducts] = useState([]);
     useEffect(() =>{
-        fetch('http://localhost:3000/Bags')
+        fetch('https://raw.githubusercontent.com/Mr-jk03/db/main/db.json')
         .then(response => response.json())
-        .then(data => setProducts(data))
+        .then(data => {
+            const bestSalser = data.Bags
+            setProducts(bestSalser)})
         .catch(error => console.error('Error fetching products:', error))
-    })
+      })
   return (
     <>
         <div className='title-best-saler'>balo thời trang</div>
         <div className='wrapper-best-saler'>
             <div className='row con-category'>
                 {products.slice(0,4).map((product,index) =>(
-                    <div className='col-lg-3 col-md-5 col-sm-5 categories' key={index}>
+                    <div className='col-lg-3 col-md-5 col-sm-5 col-5 categories' key={index}>
                         <Link to={`/detail/Bags/${product.id}`}>
                             <img src={product.image} alt={product.name}/>
                         </Link>
