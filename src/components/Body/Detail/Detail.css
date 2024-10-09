@@ -31,9 +31,6 @@
     height: 45px;
     width: 100%;
     padding: 2px;
-    display: grid;
-    grid-template-columns: 114px 112px 207px;
-    grid-template-rows: 100%;
 }
 .evl-start{
     color: #f26522;
@@ -188,4 +185,10 @@
     color: #fff;
     border: none;
     transition: 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 431px) {
+    .evalute{
+        font-size: 10px;
+    }
 }
