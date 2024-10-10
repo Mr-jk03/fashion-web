@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/fashion-web/static/css/main.4fa7dfcf.css",
-    "main.js": "/fashion-web/static/js/main.ac006f39.js",
+    "main.css": "/fashion-web/static/css/main.4e1da996.css",
+    "main.js": "/fashion-web/static/js/main.01f376fd.js",
     "static/media/fls1.jpg": "/fashion-web/static/media/fls1.281a979bedd997625e3a.jpg",
     "index.html": "/fashion-web/index.html",
-    "main.4fa7dfcf.css.map": "/fashion-web/static/css/main.4fa7dfcf.css.map",
-    "main.ac006f39.js.map": "/fashion-web/static/js/main.ac006f39.js.map"
+    "main.4e1da996.css.map": "/fashion-web/static/css/main.4e1da996.css.map",
+    "main.01f376fd.js.map": "/fashion-web/static/js/main.01f376fd.js.map"
   },
   "entrypoints": [
-    "static/css/main.4fa7dfcf.css",
-    "static/js/main.ac006f39.js"
+    "static/css/main.4e1da996.css",
+    "static/js/main.01f376fd.js"
   ]
 }
