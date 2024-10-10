@@ -178,7 +178,9 @@
     background-color: #e44a2b;
 }
 
-
+.tt{
+    color: #e44a2b;
+}
 
 
 @media (max-width: 992px) {

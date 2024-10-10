@@ -3,11 +3,10 @@ import './BodyCart.css'
 import {Link} from 'react-router-dom'
 import fls1 from '../../Images/fls1.jpg'
 
-const BodyCart = ({cartItems}) => {
+const BodyCart = ({cartItems, setCartItems, onDelete }) => {
 
-    // Tạo trạng thái cho số lượng từng sản phẩm
     const initialQuantities = cartItems.reduce((acc, item) => {
-        acc[item.id] = 1; // Giả sử mỗi sản phẩm có id duy nhất
+        acc[item.id] = 1; 
         return acc;
     }, {});
     const [quantities, setQuantities] = useState(initialQuantities);
@@ -26,6 +25,15 @@ const BodyCart = ({cartItems}) => {
         }));
     };
 
+    const TotalPrice = cartItems.reduce((acc, item) =>{
+        return acc + item.price * quantities[item.id];
+    }, 0)
+
+    const handleRemoveItem = (id) => {
+        const updatedCartItems = cartItems.filter(item => item.id !== id);
+        setCartItems(updatedCartItems); 
+        onDelete();
+    };
   
   return (
     <div className='main-body-cart'>
@@ -68,9 +76,9 @@ const BodyCart = ({cartItems}) => {
                                 <button onClick={() => handleAdd(item.id)}>+</button>
                             </div>
                         </div>
-                        <div className='col-xl-1 col-lg-2'>{item.price * quantities[item.id]} <sup>đ</sup></div>
+                        <div className='col-xl-1 col-lg-2 tt'>{item.price * quantities[item.id]} <sup>đ</sup></div>
                         <div className='col-xl-1 col-lg-2 btn-delete-cart'>
-                            <button>Xoá</button>
+                            <button onClick={() => handleRemoveItem(item.id)}>Xoá</button>
                         </div>
                     </div>
                 ))}
@@ -80,7 +88,7 @@ const BodyCart = ({cartItems}) => {
                 <div className="col-xl-6 col-lg-6">
                     <div className='span-total'>
                         <span>Tổng tiền hàng</span>
-                        <span>230.000 <sup>đ</sup></span>
+                        <span>{TotalPrice.toLocaleString()} <sup>đ</sup></span>
                     </div>
                     <div className='span-total'>
                         <span>Giảm giá sản phẩm</span>
@@ -96,7 +104,7 @@ const BodyCart = ({cartItems}) => {
                     </div>
                     <div className='span-total-price'>
                         <span>TỔNG</span>
-                        <span>230.000 <sup>đ</sup></span>
+                        <span>{TotalPrice.toLocaleString()} <sup>đ</sup></span>
                     </div>
                 </div>
             </div>

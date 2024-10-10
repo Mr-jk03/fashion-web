@@ -14,9 +14,14 @@ import BodyCart from './components/Body/BodyCart/BodyCart';
 
 function App() {
   const [count, setCount] = useState(0);
+
   const handleTotalItem = useCallback(() => {
     setCount((count) => count + 1);
   }, []);
+
+  const handleDecreaseItem = useCallback(() =>{
+    setCount((count) => Math.max(count - 1), 0)
+  }, [])
 
   const [cartItems, setCartItems] = useState([]);
 
@@ -36,7 +41,7 @@ function App() {
         <Route path='/sandalgirlfull' element={<SandalGirlFull />} />
         <Route path='/sandalboyfull' element={<SandalBoyFull />} />
         <Route path='/detail/:category/:id' element={<Detail onIncrease={addToCart} />} />
-        <Route path='/bodycart' element={<BodyCart cartItems={cartItems}/>} />
+        <Route path='/bodycart' element={<BodyCart cartItems={cartItems} setCartItems={setCartItems} onDelete={handleDecreaseItem}/>} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
       <Footer />

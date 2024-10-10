@@ -72,21 +72,6 @@ const Detail = ({ onIncrease }) => {
                             </div>
                             <span>Mã sản phẩm: {product?.id}</span>
                             <div className='row evalute'>
-                                {/* <div className='evl-start'>
-                                    <IoIosStar />
-                                    <IoIosStar />
-                                    <IoIosStar />
-                                    <IoIosStar />
-                                    <IoIosStarOutline />
-                                </div>
-                                <div className='evl-text'>
-                                    <span>136</span>
-                                    <span>Đánh giá</span>
-                                </div>
-                                <div className='evl-like'>
-                                    <span>899</span>
-                                    <span>Số lượt thích</span>
-                                </div> */}
                                 <div className='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 evl-start'>
                                     <IoIosStar />
                                     <IoIosStar />
