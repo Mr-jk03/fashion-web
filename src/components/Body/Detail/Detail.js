@@ -3,14 +3,14 @@ import './Detail.css';
 import { IoIosStar, IoIosStarOutline } from "react-icons/io";
 import { TiShoppingCart } from "react-icons/ti";
 import { Link, useParams } from 'react-router-dom';
+import DetailProducts from './DetailProducts/DetailProducts';
 
 
 const Detail = ({ onIncrease }) => {
     const [selectButton, setSelectButton] = useState(null);
     const { id, category } = useParams();
     const [product, setProduct] = useState(null);
-    const [loading, setLoading] = useState(true); // Trạng thái loading
-    const [error, setError] = useState(null); // Trạng thái lỗi
+    const [mainImage, setMainImage] = useState(product?.image);
 
     useEffect(() => {
         fetch('https://raw.githubusercontent.com/Mr-jk03/db/main/db.json')
@@ -25,15 +25,14 @@ const Detail = ({ onIncrease }) => {
                 const productData = data[category]?.find(item => item.id === parseInt(id));
                 if (productData) {
                     setProduct(productData);
+                    setMainImage(productData.image);
                 } else {
                     throw new Error('Product not found');
                 }
-                setLoading(false);
+                
             })
             .catch((error) => {
-                console.error('Error fetching product:', error);
-                setError(error.message);
-                setLoading(false);
+                console.error('Error fetching product:', error); 
             });
     }, [id, category]);
     
@@ -55,15 +54,25 @@ const Detail = ({ onIncrease }) => {
         }
     };
 
-    if (loading) return <div>Loading...</div>; // Hiển thị trạng thái loading
-    if (error) return <div>Error: {error}</div>; // Hiển thị lỗi nếu có
+    const handleImageClick = (image) =>{
+        setMainImage(image);
+    }
 
     return (
         <div className='main-detail'>
             <div className='container'>
                 <div className='row product-info'>
                     <div className='col-xl-6 col-lg-6 col-md-6 detail-img'>
-                        <img src={product?.image} alt={product?.name} />
+                        <img src={mainImage} alt={product?.name} />
+                        <div className='row img-description'>
+                            {product?.images?.map((img, index) =>(
+                                <div key={index} className='col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 img-des-con'>
+                                    <img src={img}
+                                        onClick={() => handleImageClick(img)}
+                                    />
+                                </div>
+                            ))}
+                        </div>
                     </div>
                     <div className='col-xl-6 col-lg-6 col-md-6'>
                         <div className='detail-text'>
@@ -133,6 +142,10 @@ const Detail = ({ onIncrease }) => {
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div className='detail-product'>
+                <DetailProducts />
             </div>
         </div>
     );

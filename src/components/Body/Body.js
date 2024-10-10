@@ -10,7 +10,6 @@ import SandalGirl from './SandalGirl/SandalGirl'
 import SandalBoys from './SandalBoy/SandalBoys'
 import {Link} from 'react-router-dom'
 import PhoneRing from '../../components/Images/icon-2.png'
-import MesRing from '../../components/Images/mesring.png'
 const Body = () => {
   return (
     <div className='main-body'>
@@ -28,15 +27,6 @@ const Body = () => {
               <div class="hotline-phone-ring-img-circle">
                     <Link to='/'>
                       <img src={PhoneRing}/>
-                    </Link>
-              </div>
-            </div>
-            <div class="hotline-mes-ring">
-              <div class="hotline-mes-ring-circle"></div>
-              <div class="hotline-mes-ring-circle-fill"></div>
-              <div class="hotline-mes-ring-img-circle">
-                    <Link to='/'>
-                      <img src={MesRing}/>
                     </Link>
               </div>
             </div>

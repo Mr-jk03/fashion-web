@@ -14,6 +14,22 @@
     width: 100%;
 }
 
+
+
+.img-description{
+    width: 100%;
+    margin: 10px 0 auto;
+}
+
+.img-des-con{
+    height: 100%;
+}
+.img-des-con img{
+    height: auto;
+    width: 100%;
+}
+
+
 .detail-text{
     width: 100%;
     height: auto;
@@ -186,6 +202,14 @@
     border: none;
     transition: 0.2s ease-in-out;
 }
+
+.detail-product{
+    height: auto;
+    width: 100%;
+}
+
+
+
 
 @media screen and (max-width: 431px) {
     .evalute{
