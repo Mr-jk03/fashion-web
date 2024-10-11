@@ -108,12 +108,12 @@ const Detail = ({ onIncrease }) => {
                                     <span></span>
                                 </div>
                             </div>
-                            <div className='product-size'>
-                                <div className='prd-size-text'>
+                            <div className='row product-size'>
+                                <div className='col-xl-1 prd-size-text'>
                                     <span>Kích thước</span>
                                 </div>
-                                {[45, 46, 47].map((size) => (
-                                    <div className='prd-size' key={size}>
+                                {product?.sizes?.map((size) => (
+                                    <div className='col-xl-2 prd-size' key={size}>
                                         <button
                                             onClick={() => handleSizeClick(size)}
                                             style={{
@@ -145,7 +145,7 @@ const Detail = ({ onIncrease }) => {
             </div>
 
             <div className='detail-product'>
-                <DetailProducts />
+                {product && <DetailProducts product={product}/>}
             </div>
         </div>
     );

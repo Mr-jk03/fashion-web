@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './DetailProducts.css'
 
-const DetailProducts = () => {
+const DetailProducts = ({product}) => {
 
     const [addClass, setAddclass] = useState('detail');
 
@@ -26,7 +26,11 @@ const DetailProducts = () => {
             </div>
         </div>
         <div className='row detail-body'>
-            <div>1</div>
+            {addClass === 'detail' ?(
+                <div>{product?.description}</div>
+            ):(
+                <div>Chưa có bình luận nào</div>
+            )}
         </div>
     </div>
   )

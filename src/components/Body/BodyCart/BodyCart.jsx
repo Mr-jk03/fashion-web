@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import './BodyCart.css'
 import {Link} from 'react-router-dom'
-import fls1 from '../../Images/fls1.jpg'
 
 const BodyCart = ({cartItems, setCartItems, onDelete }) => {
 
