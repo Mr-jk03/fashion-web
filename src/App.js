@@ -11,6 +11,7 @@ import SandalBoyFull from './components/Body/SandalBoy/SandalBoyFull/SandalBoyFu
 import Detail from './components/Body/Detail/Detail';
 import { useState, useCallback } from 'react';
 import BodyCart from './components/Body/BodyCart/BodyCart';
+import UserForm from './components/Header/User/UserForm/UserForm'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -42,6 +43,7 @@ function App() {
         <Route path='/sandalboyfull' element={<SandalBoyFull />} />
         <Route path='/detail/:category/:id' element={<Detail onIncrease={addToCart} />} />
         <Route path='/bodycart' element={<BodyCart cartItems={cartItems} setCartItems={setCartItems} onDelete={handleDecreaseItem}/>} />
+        <Route path='/userform' element={<UserForm />}/>
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
       <Footer />

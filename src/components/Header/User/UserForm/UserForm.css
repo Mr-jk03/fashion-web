@@ -1,0 +1,165 @@
+.main-userform{
+    padding-top: 100px;
+}
+.main-form-us{
+    margin-top: 15px;
+}
+.sign-cha{
+    height: auto;
+    
+}
+.sign-cha .text-us{
+    height: auto;
+    width: 100%;
+    text-align: center;
+}
+.text-us span{
+    font-size: 28px;
+    font-weight: 400;
+}
+.input-info-us{
+    height: auto;
+    display: grid;
+    padding: 0 30px;
+}
+
+.input-info-us label{
+    font-size: 18px;
+    margin: 5px 0;
+}
+.input-info-us input{
+    height: 40px;
+    width: 90%;
+    border-radius: 3px;
+    border: 1px solid #e2e2e2;
+    outline: none;
+    padding: 0 15px;
+    margin: 5px 0;
+}
+
+.button-sign-forgot{
+    height: auto;
+    width: 80%;
+    padding: 5px 0;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.button-sign-forgot button{
+    height: 40px;
+    border-radius: 7px;
+    border: none;
+}
+.button-sign-forgot button:nth-child(1){
+    background-color: #151414;
+    color: #fff;
+}
+.button-sign-forgot button:nth-child(2){
+    background-color: #fff;
+}
+.button-sign-forgot button:nth-child(2):hover{
+    color: rgb(12, 138, 241);
+    transition: 0.1s ease-in-out;
+}
+
+.br{
+    height: auto;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+}
+.br div{
+    height: 1px;
+    width: 30%;
+    border: 1px solid black;
+    margin: 0 10px;
+}
+
+.button-forgot{
+    height: auto;
+    width: 80%;
+    padding: 5px 0;
+    margin: 5px 0;
+    display: none;
+}
+
+.button-forgot button{
+    height: 38px;
+    width: 50%;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+}
+
+
+.button-face-google{
+    height: auto;
+    width: 80%;
+    padding: 5px 0;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.button-face-google button{
+    height: 40px;
+    width: 48%;
+    border-radius: 7px;
+    border: none;
+}
+
+.button-sign-forgot-dk{
+    height: auto;
+    width: 90%;
+    padding: 5px 0;
+    margin: 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-sign-forgot-dk button{
+    height: 40px;
+    border-radius: 7px;
+    border: none;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 431px) {
+    .input-info-us input{
+        width: 100%;
+    }
+    .button-sign-forgot{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .br{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .button-forgot{
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .button-forgot button{
+        width: 100%;
+    }
+    .button-face-google{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+}

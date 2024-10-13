@@ -1,6 +1,7 @@
-.user{
+.user a{
     display: flex;
     justify-content: center;
     margin-top: 4px;
     font-size: 20px;
+    color: #000;
 }
