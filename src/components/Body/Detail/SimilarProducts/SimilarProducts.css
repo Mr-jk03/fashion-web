@@ -1,0 +1,13 @@
+.main-similars{
+    height: auto;
+    width: 100%;
+    padding: 15px 0;
+}
+.sml-img{
+    padding: 5px 5px;
+}
+
+.sml-img a img{
+    width: 100%;
+    height: auto;
+}

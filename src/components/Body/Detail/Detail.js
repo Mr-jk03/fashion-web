@@ -4,6 +4,7 @@ import { IoIosStar, IoIosStarOutline } from "react-icons/io";
 import { TiShoppingCart } from "react-icons/ti";
 import { Link, useParams } from 'react-router-dom';
 import DetailProducts from './DetailProducts/DetailProducts';
+import SimilarProducts from './SimilarProducts/SimilarProducts';
 
 
 const Detail = ({ onIncrease }) => {
@@ -146,6 +147,9 @@ const Detail = ({ onIncrease }) => {
 
             <div className='detail-product'>
                 {product && <DetailProducts product={product}/>}
+            </div>
+            <div className='similar-prd'>
+                <SimilarProducts />
             </div>
         </div>
     );
