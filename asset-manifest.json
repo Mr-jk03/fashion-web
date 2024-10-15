@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/fashion-web/static/css/main.12a91305.css",
-    "main.js": "/fashion-web/static/js/main.24c7da78.js",
+    "main.css": "/fashion-web/static/css/main.c8928094.css",
+    "main.js": "/fashion-web/static/js/main.146adaca.js",
     "index.html": "/fashion-web/index.html",
-    "main.12a91305.css.map": "/fashion-web/static/css/main.12a91305.css.map",
-    "main.24c7da78.js.map": "/fashion-web/static/js/main.24c7da78.js.map"
+    "main.c8928094.css.map": "/fashion-web/static/css/main.c8928094.css.map",
+    "main.146adaca.js.map": "/fashion-web/static/js/main.146adaca.js.map"
   },
   "entrypoints": [
-    "static/css/main.12a91305.css",
-    "static/js/main.24c7da78.js"
+    "static/css/main.c8928094.css",
+    "static/js/main.146adaca.js"
   ]
 }
