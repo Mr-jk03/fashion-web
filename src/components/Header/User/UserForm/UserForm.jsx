@@ -1,97 +1,75 @@
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 import './UserForm.css';
-
+import logo from '../../../Images/logoJK.png'
+import { useState } from 'react';
 
 const UserForm = () => {
-    const [signUpForm, setSignUpForm] = useState();  
-    const [signInForm, setSignInForm] = useState(true); 
+    
+    const [signInForm, setSignInForm] = useState(true);
+    const [signUpForm, setSignUpForm] = useState(false);
+    const [addClass, setAddClass] = useState('SignIn');
 
-    const windowCheckResize = () => {
-        if(signUpForm){
-            return;
-        }
-        if (window.innerWidth < 541) {
-            setSignUpForm(false);
-        } else {
-            setSignUpForm(true); 
-        }
-    };
+    const handleSignInForm = () =>{
+        setSignInForm(true);
+        setSignUpForm(false);
+        setAddClass('SignIn')
+    }
 
+    const handleSignUpForm = () =>{
+        setSignUpForm(true);
+        setSignInForm(false);
+        setAddClass('SignUp')
+    }
 
-    const handleRegisterClick = () => {
-        setSignUpForm(true);  
-        setSignInForm(false); 
-    };
-
-    useEffect(() => {
-        windowCheckResize(); 
-        window.addEventListener('resize', windowCheckResize); 
-
-        return () => {
-            window.removeEventListener('resize', windowCheckResize); 
-        };
-    }, []); 
 
     return (
         <div className='main-userform'>
-            <div className="container main-form-us">
+            <div className="container">
                 <div className="row">
-                    {signInForm && 
-                        <div className="col-xl-6 col-lg-6 col-md-6 sign-cha">
-                            <div className='text-us'>
-                                <span>ĐĂNG NHẬP</span>
-                            </div>
-                            <div className='input-info-us'>
-                                <label>Tên đăng nhập</label>
-                                <input type="text" />
-                                <label>Mật khẩu</label>
-                                <input type="text" />
-                                <div className='row button-sign-forgot'>
-                                    <button className='col-xl-6 col-lg-6 col-md-6 col-sm-6'>Đăng nhập</button>
-                                    <button className='col-xl-6 col-lg-6 col-md-6 col-sm-6'>Quên mật khẩu ?</button>
-                                </div>
-                            </div>
-                            <div className='br'>
-                                <div></div>
-                                <span>Hoặc</span>
-                                <div></div>
-                            </div>
-                            <div className='button-forgot'>
-                                <button onClick={handleRegisterClick}>Đăng ký</button>
-                            </div>
-                            <div className='button-face-google'>
-                                <button>Facebook</button>
-                                <button>Google</button>
-                            </div>
-                            <span>
-                                Nếu Quý khách có vấn đề gì thắc mắc hoặc cần hỗ trợ gì thêm có thể liên hệ: <br />
-                                Hotline: 0xxx xxx xxx<br />
-                                Hoặc Inbox: giangcuong0603@gmail.com
-                            </span>
+                    <div className="main-userfrom">
+                        <div className='userfrom-logo'>
+                            <img src={logo}/>
                         </div>
-                    }
-
-
-                    {signUpForm && 
-                        <div className="col-xl-6 col-lg-6 col-md-6 sign-cha sign-up-cha">
-                            <div className='text-us'>
-                                <span>ĐĂNG KÝ</span>
-                            </div>
-                            <div className='input-info-us'>
-                                <label>Tên đăng nhập</label>
-                                <input type="text" />
-                                <label>Số điện thoại</label>
-                                <input type="text" />
-                                <label>Mật khẩu</label>
-                                <input type="text" />
-                                <label>Nhắc lại mật khẩu</label>
-                                <input type="text" />
-                                <div className='row button-sign-forgot-dk'>
-                                    <button className='col-xl-6 col-lg-6 col-md-6 col-sm-6'>Đăng ký</button>
-                                </div>
-                            </div>
+                        <div className='button-tab'>
+                            <button 
+                                onClick={handleSignInForm}
+                                className={addClass === 'SignIn' ? 'active' : ''}
+                            >
+                                ĐĂNG NHẬP
+                            </button>
+                            <button 
+                                onClick={handleSignUpForm}
+                                className={addClass === 'SignUp' ? 'active' : ''}
+                            >
+                                ĐĂNG KÝ
+                            </button>
                         </div>
-                    }
+                        <div className='main-input'>
+                            {signInForm &&
+                            <div className='formSignIn'>
+                                <lable>Tên đăng nhập: </lable>
+                                <input type="text" />
+                                <lable>Mật Khẩu: </lable>
+                                <input type="text" />
+                                <button>Đăng Nhập</button>
+                            </div>
+                            }
+                            {signUpForm &&
+                            <div className='formSignUp'>
+                                <lable>Tên đăng nhập: </lable>
+                                <input type="text" />
+                                <lable>Số điện thoại: </lable>
+                                <input type="text" />
+                                <lable>Mật Khẩu: </lable>
+                                <input type="text" />
+                                <lable>Nhắc lại mật Khẩu: </lable>
+                                <input type="text" />
+                                <button>Đăng Ký</button>
+                            </div>
+                            }
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
