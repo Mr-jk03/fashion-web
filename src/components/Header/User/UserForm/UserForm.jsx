@@ -6,6 +6,9 @@ const UserForm = () => {
     const [signInForm, setSignInForm] = useState(true); 
 
     const windowCheckResize = () => {
+        if(signUpForm){
+            return;
+        }
         if (window.innerWidth < 541) {
             if (!signUpForm) {
                 setSignUpForm(false);
