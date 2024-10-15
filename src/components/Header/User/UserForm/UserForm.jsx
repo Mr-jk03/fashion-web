@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import './UserForm.css';
 
+
 const UserForm = () => {
-    const [signUpForm, setSignUpForm] = useState(false);  
+    const [signUpForm, setSignUpForm] = useState();  
     const [signInForm, setSignInForm] = useState(true); 
 
     const windowCheckResize = () => {
@@ -10,9 +11,7 @@ const UserForm = () => {
             return;
         }
         if (window.innerWidth < 541) {
-            if (!signUpForm) {
-                setSignUpForm(false);
-            }
+            setSignUpForm(false);
         } else {
             setSignUpForm(true); 
         }
@@ -37,7 +36,7 @@ const UserForm = () => {
         <div className='main-userform'>
             <div className="container main-form-us">
                 <div className="row">
-                    {signInForm && (
+                    {signInForm && 
                         <div className="col-xl-6 col-lg-6 col-md-6 sign-cha">
                             <div className='text-us'>
                                 <span>ĐĂNG NHẬP</span>
@@ -70,10 +69,10 @@ const UserForm = () => {
                                 Hoặc Inbox: giangcuong0603@gmail.com
                             </span>
                         </div>
-                    )}
+                    }
 
 
-                    {signUpForm && (
+                    {signUpForm && 
                         <div className="col-xl-6 col-lg-6 col-md-6 sign-cha sign-up-cha">
                             <div className='text-us'>
                                 <span>ĐĂNG KÝ</span>
@@ -92,7 +91,7 @@ const UserForm = () => {
                                 </div>
                             </div>
                         </div>
-                    )}
+                    }
                 </div>
             </div>
         </div>
