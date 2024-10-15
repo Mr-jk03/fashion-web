@@ -1,40 +1,61 @@
-
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './UserForm.css';
 
 const UserForm = () => {
+    const [signUpForm, setSignUpForm] = useState(false);  
+    const [signInForm, setSignInForm] = useState(true); 
 
-    const [isSignUp, setIsSignUp] = useState(true);
-    const toggleForm = () => {
-        setIsSignUp(!isSignUp);
-      };
+    const windowCheckResize = () => {
+        if (window.innerWidth < 541) {
+            if (!signUpForm) {
+                setSignUpForm(false);
+            }
+        } else {
+            setSignUpForm(true); 
+        }
+    };
+
+
+    const handleRegisterClick = () => {
+        setSignUpForm(true);  
+        setSignInForm(false); 
+    };
+
+    useEffect(() => {
+        windowCheckResize(); 
+        window.addEventListener('resize', windowCheckResize); 
+
+        return () => {
+            window.removeEventListener('resize', windowCheckResize); 
+        };
+    }, []); 
 
     return (
         <div className='main-userform'>
             <div className="container main-form-us">
                 <div className="row">
-                {isSignUp ? (
-                    <div className="col-xl-6 col-lg-6 col-md-6 sign-cha">
-                        <div className='text-us'>
-                            <span>ĐĂNG NHẬP</span>
-                        </div>
-                        <div className='input-info-us'>
-                            <label>Tên đăng nhập</label>
-                            <input type="text" />
-                            <label>Mật khẩu</label>
-                            <input type="text" />
-                            <div className='row button-sign-forgot'>
-                                <button className='col-xl-6 col-lg-6 col-md-6 col-sm-6'>Đăng nhập</button>
-                                <button className='col-xl-6 col-lg-6 col-md-6 col-sm-6'>Quên mật khẩu ?</button>
+                    {signInForm && (
+                        <div className="col-xl-6 col-lg-6 col-md-6 sign-cha">
+                            <div className='text-us'>
+                                <span>ĐĂNG NHẬP</span>
                             </div>
-                        </div>
+                            <div className='input-info-us'>
+                                <label>Tên đăng nhập</label>
+                                <input type="text" />
+                                <label>Mật khẩu</label>
+                                <input type="text" />
+                                <div className='row button-sign-forgot'>
+                                    <button className='col-xl-6 col-lg-6 col-md-6 col-sm-6'>Đăng nhập</button>
+                                    <button className='col-xl-6 col-lg-6 col-md-6 col-sm-6'>Quên mật khẩu ?</button>
+                                </div>
+                            </div>
                             <div className='br'>
                                 <div></div>
                                 <span>Hoặc</span>
                                 <div></div>
                             </div>
                             <div className='button-forgot'>
-                                <button onClick={toggleForm}>Đăng ký</button>
+                                <button onClick={handleRegisterClick}>Đăng ký</button>
                             </div>
                             <div className='button-face-google'>
                                 <button>Facebook</button>
@@ -46,7 +67,10 @@ const UserForm = () => {
                                 Hoặc Inbox: giangcuong0603@gmail.com
                             </span>
                         </div>
-                        ) : (
+                    )}
+
+
+                    {signUpForm && (
                         <div className="col-xl-6 col-lg-6 col-md-6 sign-cha sign-up-cha">
                             <div className='text-us'>
                                 <span>ĐĂNG KÝ</span>
