@@ -1,0 +1,166 @@
+.main-logged{
+    height: auto;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 15px;
+}
+
+.title-logger{
+    height: 30px;
+    width: 100%;
+    display: flex;
+    font-size: 13px;
+    margin-top: 30px;
+}
+.title-lg-menu a{
+    color: black;
+    text-decoration: none;
+}
+.title-lg-menu a::after{
+    content: '|';
+    margin: 0 5px;
+}
+
+
+.avt-us-logged{
+    height: 60px;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid rgb(218, 216, 216);
+}
+
+.avt-img{
+    height: 100%;
+    width: auto;
+}
+.avt-img img{
+    height: 100%;
+    width: auto;
+}
+
+.avt-us-logged button{
+    height: 30px;
+    width: auto;
+    border: none;
+    background-color: #fff;
+    margin-left: 10px;
+    font-size: 13px;
+}
+.ul-menu-us-lg{
+    height: auto;
+    width: 100%;
+    padding: 5px;
+    margin: 7px 0;
+}
+.ul-menu-us-lg ul li{
+    list-style: none;
+}
+.ul-menu-us-lg ul li a{
+    color: #000;
+    text-decoration: none;
+}
+.li-cha-us{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    margin: 15px 0;
+}
+.li-cha-us a{
+    margin-left: 5px;
+    cursor: pointer;
+}
+.li-cha-us .FaUserAlt {
+    color: #06c4da; 
+}
+.li-cha-us .LuMenuSquare {
+    color: #0b7af0; 
+}
+.li-cha-us .PiBellSimpleRingingFill {
+    color: #f16005; 
+}
+.li-cha-us .TbTicket {
+    color: #f16005; 
+}
+.li-cha-us .FaHeartCirclePlus {
+    color: #f00b4c; 
+}
+.li-cha-us .CiLogout {
+    color: #0ba4f0; 
+}
+.li-con-us{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: auto;
+    width: 100%;
+    padding: 5px;
+    background-color: #d2d1d1;
+    z-index: 100;
+}
+
+.right-body{
+    border: 1px solid rgb(231, 231, 231);
+    border-radius: 7px;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+.info-left{
+    padding-bottom:15px;
+}
+
+.form-avt{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid rgb(231, 231, 231);
+}
+.form-avt img{
+    height: 90px;
+    width: 90px;
+}
+
+.form-avt button{
+    height: 37px;
+    width: 90px;
+    border: none;
+    outline: none;
+    background-color: #3dbdfd;
+    border-radius: 5px;
+}
+
+.gender{
+    height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.gender span{
+    margin: 0 15px;
+}
+.gender input{
+    transform: scale(1.5);
+}
+.date{
+    height: 30px;
+    width: 140px;
+    margin-left: 15px;
+    padding: 0 2px;
+    border-radius: 3px;
+    outline: none;
+}
+.btn-save-infor{
+    height: 30px;
+    width: 140px;
+    border: none;
+    border-radius: 3px;
+    background-color: #f16005;
+    color: #fff;
+}
+.btn-save-infor:hover{
+    background-color: #df5805;
+}
