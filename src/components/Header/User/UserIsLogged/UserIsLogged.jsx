@@ -13,6 +13,7 @@ import Orders from '../Orders/Orders';
 import Notifications from '../Notifications/Notifications';
 import Vouchers from '../Vouchers/Vouchers';
 import Favoriteproduct from '../Favoriteproduct/Favoriteproduct';
+import Changepass from '../Changepass/Changepass';
 
 const UserIsLogged = ({onLogOut, username}) => {
 
@@ -36,6 +37,8 @@ const UserIsLogged = ({onLogOut, username}) => {
                 return{activeComponent: "VOUCHERS"}
             case "FAVORITES":
                 return{activeComponent: "FAVORITES"}
+            case "CHANGE_PASS":
+                return{activeComponent: "CHANGE_PASS"}
             default:
                 return state
         }
@@ -76,7 +79,7 @@ const UserIsLogged = ({onLogOut, username}) => {
                                             <a onClick={() => dispatch({type: "MY_ACCOUNT"})}>Hồ Sơ</a>
                                         </li>
                                         <li onClick={handleShowULMenu}>
-                                            <a>Đổi mật khẩu</a>
+                                            <a onClick={() => dispatch({type: "CHANGE_PASS"})}>Đổi mật khẩu</a>
                                         </li>
                                     </ul>
                                 )}
@@ -150,7 +153,7 @@ const UserIsLogged = ({onLogOut, username}) => {
                         </div>
                     </div>
                 }
-                    <div className="row">
+                    <div className="row menureducer">
                         {state.activeComponent === "ORDERS" &&
                             <Orders />
                         }
@@ -162,6 +165,9 @@ const UserIsLogged = ({onLogOut, username}) => {
                         }
                         {state.activeComponent === "FAVORITES" &&
                             <Favoriteproduct />
+                        }
+                        {state.activeComponent === "CHANGE_PASS" &&
+                            <Changepass />
                         }
 
                     </div>
