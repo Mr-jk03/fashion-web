@@ -1,4 +1,3 @@
-// import { useState, useEffect } from 'react';
 import './UserForm.css';
 import logo from '../../../Images/logoJK.png';
 import React, { useState, useEffect } from 'react';
@@ -13,6 +12,11 @@ const UserForm = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
+    const [newUsername, setNewUsername] = useState('');
+    const [newPassword, setNewPassword] = useState('');
+    const [phoneNumber, setPhoneNumber] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
+
     const handleSignInForm = () => {
         setSignInForm(true);
         setSignUpForm(false);
@@ -26,17 +30,51 @@ const UserForm = () => {
     };
 
     const handleLogin = () => {
-        if (username === 'cuong' && password === '12345') {
+        const user = JSON.parse(localStorage.getItem(username));
+        if (user && user.password === password) {
             setIsLognIn(true);
             localStorage.setItem('isLoggedIn', true);
+            localStorage.setItem('LoggedInUser', username);
+            setUsername('');
+            setPassword('');
+            
         } else {
-            alert('Tài khoản mật khẩu không chính xác !');
+            alert('Tài khoản hoặc mật khẩu không chính xác!');
+        }
+    };
+
+    const handleSignUp = () => {
+        if (newPassword !== confirmPassword) {
+            alert('Mật khẩu và xác nhận mật khẩu không khớp');
+            return;
+        }
+
+        const existingUser = localStorage.getItem(newUsername);
+        if (existingUser) {
+            alert('Tên đăng nhập đã tồn tại');
+        } else {
+            const newData = { username: newUsername, phoneNumber: phoneNumber, password: newPassword };
+            localStorage.setItem(newUsername, JSON.stringify(newData));
+            alert('Đăng ký thành công');
+            // setNewUsername('');
+            // setNewPassword('');
+            // setPhoneNumber('');
+            // setConfirmPassword('');
+
+            // setSignInForm(true);
+            // setSignUpForm(false);
+            // setAddClass('SignIn');
+            setUsername(newUsername);
+            setPassword(newPassword);
+            setIsLognIn(true);
+            
         }
     };
 
     const handleLogout = () => {
         setIsLognIn(false);
         localStorage.removeItem('isLoggedIn');
+        localStorage.removeItem('LoggedInUser');
     };
 
     useEffect(() => {
@@ -84,14 +122,26 @@ const UserForm = () => {
                                 {signUpForm && (
                                     <div className='formSignUp'>
                                         <label>Tên đăng nhập: </label>
-                                        <input type="text" />
+                                        <input type="text"
+                                            value={newUsername}
+                                            onChange={(e) => setNewUsername(e.target.value)}
+                                        />
                                         <label>Số điện thoại: </label>
-                                        <input type="text" />
+                                        <input type="text"
+                                            value={phoneNumber}
+                                            onChange={(e) => setPhoneNumber(e.target.value)}
+                                        />
                                         <label>Mật Khẩu: </label>
-                                        <input type="password" />
-                                        <label>Nhắc lại mật Khẩu: </label>
-                                        <input type="password" />
-                                        <button>Đăng Ký</button>
+                                        <input type="password" 
+                                            value={newPassword}
+                                            onChange={(e) => setNewPassword(e.target.value)}
+                                        />
+                                        <label>Nhắc lại mật khẩu: </label>
+                                        <input type="password" 
+                                            value={confirmPassword}
+                                            onChange={(e) => setConfirmPassword(e.target.value)}
+                                        />
+                                        <button onClick={handleSignUp}>Đăng Ký</button>
                                     </div>
                                 )}
                             </div>

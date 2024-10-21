@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from 'react'
+import React, { useEffect, useReducer, useState } from 'react'
 import {Link} from 'react-router-dom'
 import './UserIsLogged.css'
 import User from '../../../Images/user.png'
@@ -16,6 +16,28 @@ import Favoriteproduct from '../Favoriteproduct/Favoriteproduct';
 import Changepass from '../Changepass/Changepass';
 
 const UserIsLogged = ({onLogOut, username}) => {
+
+    const [userData, setUserData] = useState({
+        username: '',
+        phoneNumber: '',
+        email: '',
+        gender: '',
+        birthday: '',
+    });
+
+    useEffect(() =>{
+        const LoggedInUser = localStorage.getItem('LoggedInUser');
+        if(LoggedInUser){
+            const user = JSON.parse(localStorage.getItem(LoggedInUser));
+            setUserData({
+                username: user.username,
+                phoneNumber: user.phoneNumber,
+                email: user.email || '',
+                gender: user.gender || '',
+                birthday: user.birthday || ''
+            });
+        }
+    }, [])
 
     const [showUlMenu, setshowUlMenu] = useState(false);
 
@@ -115,7 +137,7 @@ const UserIsLogged = ({onLogOut, username}) => {
                         <div className="col-12 col-md-8 info-left">
                             <div className="mb-3">
                                 <label htmlFor="username" className="form-label">Tên Đăng Nhập</label>
-                                <input type="text" className="form-control" id="username" placeholder="Tên Đăng Nhập" />
+                                <input type="text" className="form-control" id="username" value={userData.username} placeholder="Tên Đăng Nhập" />
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="name" className="form-label">Tên</label>
@@ -127,7 +149,7 @@ const UserIsLogged = ({onLogOut, username}) => {
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="phone" className="form-label">Số Điện Thoại</label>
-                                <input type="text" className="form-control" id="phone" placeholder="Số điện thoại" />
+                                <input type="text" className="form-control" id="phone" value={userData.phoneNumber} placeholder="Số điện thoại" />
                             </div>
                             <div className='mb-3'>
                                 <label htmlFor="phone" className="form-label">Giới tính</label>
