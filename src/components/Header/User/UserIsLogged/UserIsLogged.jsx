@@ -26,9 +26,9 @@ const UserIsLogged = ({onLogOut, username}) => {
     });
 
     useEffect(() =>{
-        const LoggedInUser = localStorage.getItem('LoggedInUser');
-        if(LoggedInUser){
-            const user = JSON.parse(localStorage.getItem(LoggedInUser));
+        const loggedInUser = localStorage.getItem('LoggedInUser');
+        if(loggedInUser){
+            const user = JSON.parse(localStorage.getItem(loggedInUser));
             setUserData({
                 username: user.username,
                 phoneNumber: user.phoneNumber,
@@ -137,19 +137,19 @@ const UserIsLogged = ({onLogOut, username}) => {
                         <div className="col-12 col-md-8 info-left">
                             <div className="mb-3">
                                 <label htmlFor="username" className="form-label">Tên Đăng Nhập</label>
-                                <input type="text" className="form-control" id="username" value={userData.username} placeholder="Tên Đăng Nhập" />
+                                <input type="text" className="form-control" id="username" value={userData.username} readOnly />
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="name" className="form-label">Tên</label>
-                                <input type="text" className="form-control" id="name" placeholder="Tên" />
+                                <input type="text" className="form-control" id="name" placeholder="Tên" readOnly />
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="email" className="form-label">Email</label>
-                                <input type="email" className="form-control" id="email" placeholder="Email" />
+                                <input type="email" className="form-control" id="email" placeholder="Email" readOnly/>
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="phone" className="form-label">Số Điện Thoại</label>
-                                <input type="text" className="form-control" id="phone" value={userData.phoneNumber} placeholder="Số điện thoại" />
+                                <input type="text" className="form-control" id="phone" value={userData.phoneNumber} placeholder="Số điện thoại" readOnly/>
                             </div>
                             <div className='mb-3'>
                                 <label htmlFor="phone" className="form-label">Giới tính</label>

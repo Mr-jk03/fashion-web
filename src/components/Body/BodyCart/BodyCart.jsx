@@ -1,36 +1,75 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './BodyCart.css'
 import {Link} from 'react-router-dom'
 
 const BodyCart = ({cartItems, setCartItems, onDelete }) => {
 
-    const initialQuantities = cartItems.reduce((acc, item) => {
-        acc[item.id] = 1; 
-        return acc;
-    }, {});
-    const [quantities, setQuantities] = useState(initialQuantities);
+
+    console.log(cartItems);
+    // Khởi tạo trạng thái số lượng
+    const getInitialQuantities = (items) => {
+        return items.reduce((acc, item) => {
+            acc[item.id] = item.quantity || 1; 
+            return acc;
+        }, {});
+    };
+
+    const [quantities, setQuantities] = useState(getInitialQuantities(cartItems));
+
+    const saveCart = (cartItems) => {
+        const loggedInUser = localStorage.getItem('LoggedInUser');
+        if (loggedInUser) {
+            localStorage.setItem(`${loggedInUser}_cart`, JSON.stringify(cartItems));
+        }
+    };
+
+    const loadCart = () => {
+        const loggedInUser = localStorage.getItem('LoggedInUser');
+        if (loggedInUser) {
+            const savedCart = JSON.parse(localStorage.getItem(`${loggedInUser}_cart`));
+            return savedCart || [];
+        }
+        return [];
+    };
+
+    useEffect(() => {
+        // const initialCart = loadCart();
+        // setCartItems(initialCart);
+        // setQuantities(getInitialQuantities(initialCart));
+        const loggedInUser = localStorage.getItem('LoggedInUser')
+        if(loggedInUser){
+            const saveCart = JSON.parse(localStorage.getItem(`${loggedInUser}_cart`)) || [];
+            setCartItems(saveCart);
+            setQuantities(getInitialQuantities(saveCart));
+        }
+    }, []);
+
+    useEffect(() => {
+        saveCart(cartItems);
+        setQuantities(getInitialQuantities(cartItems)); // Cập nhật số lượng khi cartItems thay đổi
+    }, [cartItems]);
 
     const handleDelete = (id) => {
-        setQuantities((prevQuantities) => {
-            const newQuantity = prevQuantities[id] > 1 ? prevQuantities[id] - 1 : 1;
-            return { ...prevQuantities, [id]: newQuantity };
-        });
+        setQuantities((prevQuantities) => ({
+            ...prevQuantities,
+            [id]: prevQuantities[id] > 1 ? prevQuantities[id] - 1 : 1,
+        }));
     };
 
     const handleAdd = (id) => {
         setQuantities((prevQuantities) => ({
             ...prevQuantities,
-            [id]: prevQuantities[id] + 1,
+            [id]: (prevQuantities[id] || 1) + 1,
         }));
     };
 
-    const TotalPrice = cartItems.reduce((acc, item) =>{
+    const TotalPrice = cartItems.reduce((acc, item) => {
         return acc + item.price * quantities[item.id];
-    }, 0)
+    }, 0);
 
     const handleRemoveItem = (id) => {
         const updatedCartItems = cartItems.filter(item => item.id !== id);
-        setCartItems(updatedCartItems); 
+        setCartItems(updatedCartItems);
         onDelete();
     };
   
@@ -123,18 +162,18 @@ const BodyCart = ({cartItems, setCartItems, onDelete }) => {
                 </div>
 
                 <div className="col-xl-4 col-lg-4 tp-select">
-                    <select name="" id="">
-                        <option selected>-- Chọn tỉnh --</option>
+                    <select name="" id="" defaultValue="">
+                        <option value="">-- Chọn tỉnh --</option>
                     </select>
                 </div>
                 <div className="col-xl-4 col-lg-4 tp-select">
-                    <select name="" id="">
-                        <option selected>-- Chọn Quận/huyện --</option>
+                    <select name="" id="" defaultValue="">
+                        <option value="">-- Chọn Quận/huyện --</option>
                     </select>
                 </div>
                 <div className="col-xl-4 col-lg-4 tp-select">
-                    <select name="" id="">
-                        <option selected>-- Chọn Xã/phường --</option>
+                    <select name="" id="" defaultValue="">
+                        <option value="">-- Chọn Xã/phường --</option>
                     </select>
                 </div>
                 <div className='col-xl-12 tp-buton'>

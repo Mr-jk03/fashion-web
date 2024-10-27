@@ -27,8 +27,20 @@ function App() {
   const [cartItems, setCartItems] = useState([]);
 
   const addToCart = (item) => {
-    setCartItems((prevItems) => [...prevItems, item]);
-    handleTotalItem(); 
+
+    setCartItems((prevItems) => {
+      const existingItemIndex = prevItems.findIndex(cartItem => cartItem.id === item.id);
+      if (existingItemIndex !== -1) {
+          // Tăng số lượng nếu sản phẩm đã tồn tại
+          const updatedItems = [...prevItems];
+          updatedItems[existingItemIndex].quantity += 1;
+          return updatedItems;
+      } else {
+          // Thêm sản phẩm mới với quantity = 1
+          return [...prevItems, { ...item, quantity: 1 }];
+      }
+    });
+    handleTotalItem();
   };
 
   return (
